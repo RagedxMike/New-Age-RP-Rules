@@ -154,21 +154,25 @@ header {
 
 .fixed-buttons {
     position: fixed;
-    bottom: 30px;
-    right: 40px;
+    bottom: 25px;
+    right: 25px;
     display: flex;
-    gap: 10px; /* space between buttons */
+    flex-direction: row; /* ensure horizontal layout */
+    flex-wrap: nowrap;   /* don’t allow wrapping */
+    gap: 10px;           /* space between buttons */
     z-index: 10000;
 }
 
 .discord-button,
 .server-button {
+    display: inline-block; /* make sure buttons behave correctly */
+    white-space: nowrap;   /* prevent text from wrapping */
     font-weight: 600;
-    font-size: 1rem;
-    padding: 14px 28px;
+    font-size: 0.95rem;
+    padding: 10px 22px;
     text-decoration: none;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    border-radius: 6px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.35);
     transition: background 0.3s, transform 0.2s;
 }
 
@@ -191,3 +195,4 @@ header {
     background-color: #cc0000;
     transform: translateY(-2px);
 }
+
