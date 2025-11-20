@@ -152,55 +152,42 @@ header {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
-/* Floating Discord Button */
-.discord-button {
+.fixed-buttons {
     position: fixed;
-    /* stays in viewport */
     bottom: 30px;
-    /* distance from bottom */
-    right: 30px;
-    /* distance from right */
-    background-color: #7289da;
-    color: #fff;
+    right: 40px;
+    display: flex;
+    gap: 10px; /* space between buttons */
+    z-index: 10000;
+}
+
+.discord-button,
+.server-button {
     font-weight: 600;
     font-size: 1rem;
     padding: 14px 28px;
     text-decoration: none;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-    z-index: 10000;
-    /* ensures it's above everything */
     transition: background 0.3s, transform 0.2s;
+}
+
+.discord-button {
+    background-color: #7289da; /* Discord blue */
+    color: white;
 }
 
 .discord-button:hover {
     background-color: #5b6eae;
     transform: translateY(-2px);
-
 }
 
 .server-button {
-    position: fixed;
-    /* stays in viewport */
-    bottom: 30px;
-    /* distance from bottom */
-    right: 40px;
-    /* distance from right */
-    background-color: #ff0000;
-    color: #fff;
-    font-weight: 600;
-    font-size: 1rem;
-    padding: 14px 28px;
-    text-decoration: none;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-    z-index: 10000;
-    /* ensures it's above everything */
-    transition: background 0.3s, transform 0.2s;
+    background-color: #ff0000; /* your server button red */
+    color: white;
 }
 
-.discord-button:hover {
-    background-color: #5b6eae;
+.server-button:hover {
+    background-color: #cc0000;
     transform: translateY(-2px);
-
 }
